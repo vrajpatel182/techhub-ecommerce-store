@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechHub & Lifestyle - Premium Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Preloader / Loading Spinner -->
+  <div id="loader-wrapper">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Header Section -->
+  <header class="navbar">
+    <a href="#" class="logo">Tech<span>Hub</span></a>
+
+    <div class="nav-actions">
+      <!-- Dark/Light Theme Toggle -->
+      <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Theme">🌙</button>
+
+      <!-- Wishlist Counter -->
+      <div class="nav-icon-btn" id="open-wishlist-btn" title="Wishlist">
+        ❤️ <span id="wishlist-count">0</span>
+      </div>
+
+      <!-- Cart Counter -->
+      <div class="cart-btn" id="open-cart-btn">
+        🛒 Cart <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Background Banner -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Discover Latest Tech & Lifestyle Gear</h1>
+      <p>Premium quality gadgets, shoes, and clothing at unbeatable prices</p>
+      <a href="#shop-section" class="hero-btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="container" id="shop-section">
+    
+    <!-- Controls Container (Search, Filters, Sorting) -->
+    <div class="controls-wrapper">
+      
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="🔍 Search products (e.g. Shoes, Watch)...">
+      </div>
+
+      <!-- Price Range & Sorting Controls -->
+      <div class="filter-controls">
+        <div class="price-range-box">
+          <label for="price-range">Max Price: <strong id="price-val">₹5000</strong></label>
+          <input type="range" id="price-range" min="500" max="5000" step="100" value="5000">
+        </div>
+
+        <div class="sort-box">
+          <select id="sort-select">
+            <option value="default">Sort By: Default</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-filter">
+        <button class="filter-btn active" data-category="all">All Products</button>
+        <button class="filter-btn" data-category="tech">Tech</button>
+        <button class="filter-btn" data-category="shoes">Shoes</button>
+        <button class="filter-btn" data-category="clothes">Clothes</button>
+      </div>
+    </div>
+    
+    <!-- Dynamic Product Grid -->
+    <div class="product-grid" id="product-grid">
+      <!-- JavaScript will populate products here -->
+    </div>
+  </main>
+
+  <!-- Cart Slide Panel -->
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>Your Shopping Cart 🛒</h3>
+        <span class="close-btn" id="close-cart-btn">&times;</span>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <p class="empty-msg">Your cart is empty!</p>
+      </div>
+      <div class="cart-footer">
+        <h4>Total Amount: <span id="cart-total">₹0</span></h4>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div class="cart-modal" id="wishlist-modal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>Your Wishlist ❤️</h3>
+        <span class="close-btn" id="close-wishlist-btn">&times;</span>
+      </div>
+      <div class="cart-items" id="wishlist-items">
+        <p class="empty-msg">Your wishlist is empty!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Details Quick View Modal -->
+  <div class="modal-overlay" id="product-modal">
+    <div class="modal-card">
+      <span class="close-btn" id="close-product-modal">&times;</span>
+      <div class="modal-body" id="product-modal-body">
+        <!-- JS will populate details here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>TechHub is your destination for premium quality gadgets, trendy apparel, and everyday lifestyle gear.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#shop-section">Shop</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" class="social-icon">🌐 Facebook</a>
+          <a href="#" class="social-icon">📸 Instagram</a>
+          <a href="#" class="social-icon">🐦 Twitter</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TechHub. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
